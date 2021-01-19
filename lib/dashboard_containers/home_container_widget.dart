@@ -5,7 +5,6 @@ import 'package:sll_android/home_container_widgets/FootBallScreen.dart';
 import 'package:sll_android/home_container_widgets/HockeyScreen.dart';
 import 'package:sll_android/home_container_widgets/Tennis.dart';
 
-
 final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 final SnackBar snackBar = const SnackBar(content: Text('Working on it'));
 
