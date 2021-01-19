@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sll_android/HomeScreen.dart';
+import 'package:sll_android/DashBoard.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(primaryColor: Colors.white),
-      home: HomeScreen(),
+      home: DashBoard(),
       debugShowCheckedModeBanner: false,
     );
   }

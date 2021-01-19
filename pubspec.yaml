@@ -23,6 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  salomon_bottom_bar: ^2.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -61,9 +62,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-     - family: sans
-       fonts:
-         - asset: fonts/product_sans_bold.ttf
+    - family: sans
+      fonts:
+        - asset: fonts/product_sans_bold.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

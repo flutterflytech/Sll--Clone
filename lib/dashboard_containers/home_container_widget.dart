@@ -1,15 +1,15 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'CricketScreen.dart';
-import 'FootBallScreen.dart';
-import 'BasketBallScreen.dart';
-import 'Tennis.dart';
-import 'HockeyScreen.dart';
+import 'package:sll_android/home_container_widgets/BasketBallScreen.dart';
+import 'package:sll_android/home_container_widgets/CricketScreen.dart';
+import 'package:sll_android/home_container_widgets/FootBallScreen.dart';
+import 'package:sll_android/home_container_widgets/HockeyScreen.dart';
+import 'package:sll_android/home_container_widgets/Tennis.dart';
+
 
 final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 final SnackBar snackBar = const SnackBar(content: Text('Working on it'));
 
-class HomeScreen extends StatelessWidget {
+class HomeContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
