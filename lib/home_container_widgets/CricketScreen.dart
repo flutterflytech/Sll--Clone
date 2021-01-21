@@ -1,66 +1,53 @@
-import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:page_indicator/page_indicator.dart';
 
 class CricketScreen extends StatelessWidget {
-  var currentPageIndex = 0.0;
-
-  _onPageViewChange(int page) {
-    currentPageIndex = page.toDouble();
-
-    int previousPage = page;
-    if(page != 0) previousPage--;
-    else previousPage = 2;
-  }
+  int counter = 0;
+  PageController controller;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          height: MediaQuery.of(context).size.width * 0.67,
-          width: MediaQuery.of(context).size.width,
-          child: PageView(
-            onPageChanged: _onPageViewChange,
-            children: <Widget>[
-              Container(
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                  image: NetworkImage(
-                      'https://static.toiimg.com/thumb/msid-58475411,width-748,height-499,resizemode=4,imgsize-142947/.jpg'),
-                )),
+    return Container(
+      color: Colors.black87,
+      child: Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(10.0),
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12.0),
+              child: Container(
+                color: Colors.black38,
+                height: 200.0,
+                child: PageIndicatorContainer(
+                  key: key,
+                  child: PageView(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          "One",
+                          style: TextStyle(color: Colors.white),
+                        ),
+                      ),
+                      Text("Two"),
+                      Text("Three"),
+                      Text("Four"),
+                      Text("Five"),
+                      Text("Six"),
+                    ],
+                    controller: controller,
+                    reverse: false,
+                  ),
+                  align: IndicatorAlign.bottom,
+                  length: 6,
+                  indicatorSpace: 5.0,
+                ),
               ),
-              Container(
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: NetworkImage(
-                            'https://static.toiimg.com/thumb/msid-58475411,width-748,height-499,resizemode=4,imgsize-142947/.jpg'))),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: NetworkImage(
-                            'https://static.toiimg.com/thumb/msid-58475411,width-748,height-499,resizemode=4,imgsize-142947/.jpg'))),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                    image: DecorationImage(
-                        image: NetworkImage(
-                            'https://static.toiimg.com/thumb/msid-58475411,width-748,height-499,resizemode=4,imgsize-142947/.jpg'))),
-              ),
-            ],
-          ),
-        ),
-        Container(
-          child: DotsIndicator(
-            dotsCount: 4,
-            position: currentPageIndex,
-            decorator: DotsDecorator(
-              activeColor: Colors.black,
             ),
           ),
-        )
-      ],
+        ],
+      ),
     );
   }
 }

@@ -14,7 +14,6 @@ class DashBoard extends StatefulWidget {
 
 class BottomNavigation extends State<DashBoard> {
   var _selectedTab = _SelectedTab.home;
-
   void _handleIndexChanged(int i) {
     setState(() {
       _selectedTab = _SelectedTab.values[i];
@@ -67,7 +66,7 @@ class BottomNavigation extends State<DashBoard> {
                   selectedColor: Colors.teal,
                 ),
                 SalomonBottomBarItem(
-                  icon: Icon(Icons.remove_circle_outline_rounded),
+                  icon: Icon(Icons.more_vert),
                   title: Text("More"),
                   selectedColor: Colors.lightBlueAccent,
                 )
