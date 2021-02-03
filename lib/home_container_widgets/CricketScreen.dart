@@ -21,7 +21,6 @@ class CricketScreen extends StatelessWidget {
                 color: Colors.black38,
                 height: 200.0,
                 child: PageIndicatorContainer(
-                  key: key,
                   child: PageView(
                     children: <Widget>[
                       pageViewUI(),
