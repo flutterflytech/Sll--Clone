@@ -1,12 +1,24 @@
 import 'package:flutter/material.dart';
 
-class MatchContainer extends StatelessWidget {
+class MatchContainer extends StatefulWidget {
+  @override
+  _MatchScreenWidget createState() => _MatchScreenWidget();
+}
+
+class _MatchScreenWidget extends State<MatchContainer> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.lightBlueAccent,
-      child: Center(
-        child: Text('Match'),
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          'Match',
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+      body: Container(
+        color: Colors.black87,
+
       ),
     );
   }
